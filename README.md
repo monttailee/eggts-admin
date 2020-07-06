@@ -1,6 +1,6 @@
 # eggts-admin
 
-egg+ts admin
+egg+ts+tpl admin
 
 ## QuickStart
 
