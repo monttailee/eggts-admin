@@ -1,6 +1,5 @@
 # eggts-admin
-
-egg+ts admin
+    基于eggjs + es6 + typescript + react + dva + antd + g2 的通用后台管理系统
 
 ## QuickStart
 

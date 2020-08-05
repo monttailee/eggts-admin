@@ -4,7 +4,9 @@
 
 /**
  * @param {Egg.EggAppInfo} appInfo app info
+ * 通用配置
  */
+const path = require('path');
 module.exports = appInfo => {
   /**
    * built-in config
@@ -17,6 +19,18 @@ module.exports = appInfo => {
 
   // add your middleware config here
   config.middleware = [];
+
+  //配置多个view目录，从他们中查找文件
+  config.view = {
+    defaultViewEngine: 'nunjucks',
+    mapping: {
+      '.tpl': 'nunjucks',
+    },
+    root: [
+      path.join(appInfo.baseDir, 'app/view'),
+      path.join(appInfo.baseDir, 'path/to/another'),
+    ].join(',')
+  };
 
   // add your user config here
   const userConfig = {
