@@ -32,6 +32,20 @@ module.exports = appInfo => {
     ].join(',')
   };
 
+  config.sequelize = {
+    dialect: 'mysql',
+    host: '127.0.0.1',
+    port: 3306,
+    database: 'egg-sequelize-doc-default',
+  };
+
+  config.passportGithub = {
+    key: 'your_clientID',
+    secret: 'your_clientSecret',
+    // callbackURL: '/passport/github/callback',
+    // proxy: false,
+  };
+
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
